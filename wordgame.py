@@ -5,6 +5,12 @@ def get_random_word():
     random_word = words[random.randint(0,len(words)-1)]
     return random_word
 
+def show_word(word):
+    for character in word:
+        print(character," ",end="")
+    print("")
+    print(word)
+
 def play_word_games(): # parameters go inside parentheses
     strikes = 0
     max_strikes = 3
@@ -12,7 +18,13 @@ def play_word_games(): # parameters go inside parentheses
 
     word = get_random_word()
 
+    blanked_word = "_" * len(word)
+
     while playing:
+        show_word(blanked_word)
+
+        # letter = get_guess()
+
         strikes += 1
 
         if strikes >= max_strikes:
