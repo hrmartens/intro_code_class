@@ -9,7 +9,10 @@ def show_word(word):
     for character in word:
         print(character," ",end="")
     print("")
-    print(word)
+
+def get_guess():
+    print("Enter a letter")
+    return input()
 
 def play_word_games(): # parameters go inside parentheses
     strikes = 0
@@ -23,7 +26,7 @@ def play_word_games(): # parameters go inside parentheses
     while playing:
         show_word(blanked_word)
 
-        # letter = get_guess()
+        letter = get_guess()
 
         strikes += 1
 
